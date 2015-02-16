@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/pchui/.rvm/gems/ruby-2.1.2@htmltoword/gems/nokogiri-1.6.5/ports/x86_64-apple-darwin13.1.0/libxml2/2.9.2'
+let g:netrw_dirhist_2='/Users/pchui/Documents/FWK/vm_shared/git/htmltoword/spec'
+let g:netrw_dirhist_3='/Users/pchui/Documents/FWK/vm_shared/git/sk-transformer/spec/lib'
+let g:netrw_dirhist_4='/Users/pchui/Documents/FWK/vm_shared/git/catapult/config/deploy'
