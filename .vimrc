@@ -8,7 +8,7 @@ if has("autocmd")
   filetype indent plugin on 
 endif 
 
-syntax on
+syntax enable
 " END: Pathogen load
 
 set ic
@@ -22,7 +22,7 @@ set hidden
 set nocompatible  " We don't want vi compatibility.
 set cursorline
 set laststatus=2
-set statusline=%<\ %n:%f\ %m%r%y%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+" set statusline=%<\ %n:%f\ %m%r%y%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
@@ -65,7 +65,6 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'garbas/vim-snipmate'
-Plugin 'burnettk/vim-angular'
 call vundle#end()
 
 " " Add recently accessed projects menu (project plugin)
@@ -92,3 +91,31 @@ set mouse=a  " Mouse in all modes
 set backup                     " Enable creation of backup file.
 set backupdir=~/.vim/backups " Where backups will go.
 set directory=~/.vim/tmp     " Where temporary files will go.
+
+" Setup Ruby autocomplete
+if has("autocmd")
+  autocmd FileType ruby set omnifunc=rubycomplete#Complete
+  autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+  autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+endif
+
+" SuperTab Options for autocompletion
+" let g:SuperTabDefaultCompletionType="<C-x><C-o>"
+let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabContextDefaultCompletionType="<C-X><C-O>"
+
+" Configure Javascript settings
+set javascript_enable_domhtmlcss=1
+let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,react,jasmine'
+
+" Adding the following to your .vimrc, will setup SyntaxComplete for every filetype that does not already have a language specific OMNI script: 
+if has("autocmd") && exists("+omnifunc") 
+cmd Filetype * 
+\	if &omnifunc == "" | 
+\	setlocal omnifunc=syntaxcomplete#Complete | 
+\	endif 
+endif 
+
+" Status line settings
+let g:airline_theme='dark'
+let g:airline_powerline_fonts = 1
