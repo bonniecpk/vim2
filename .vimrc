@@ -55,13 +55,10 @@ au BufNewFile,BufRead *.hamlc set filetype=haml
 
 " " Add recently accessed projects menu (project plugin)
 " set viminfo^=!
-" 
-" " Minibuffer Explorer Settings
-" let g:miniBufExplMapWindowNavVim = 1
-" let g:miniBufExplMapWindowNavArrows = 1
-" let g:miniBufExplMapCTabSwitchBufs = 1
-" let g:miniBufExplModSelTarget = 1
-" 
+ 
+" Minibuffer Explorer Settings - More options http://vim.sourceforge.net/scripts/script.php?script_id=159
+let g:miniBufExplMapCTabSwitchBufs = 1
+ 
 " " alt+n or alt+p to navigate between entries in QuickFix
 " map   :cp 
 " map   :cn 
@@ -106,3 +103,7 @@ let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,react,jasmine
 let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+
+" Setup vim-vroom
+let g:vroom_use_colors=1
+let g:vroom_use_vimux=1
