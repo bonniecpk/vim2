@@ -22,7 +22,6 @@ set hidden
 set nocompatible  " We don't want vi compatibility.
 set cursorline
 set laststatus=2
-" set statusline=%<\ %n:%f\ %m%r%y%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set cf  " Enable error files & error jumping.
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
@@ -37,12 +36,13 @@ set wildmenu
 set grepprg=ack
 
 " tab navigation like firefox
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
+" nnoremap <C-S-tab> :tabprevious<CR>
+" nnoremap <C-tab>   :tabnext<CR>
+" nnoremap <C-t>     :tabnew<CR>
+" inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+" inoremap <C-tab>   <Esc>:tabnext<CR>i
+" inoremap <C-t>     <Esc>:tabnew<CR>
+map      <C-n> :NERDTreeToggle<CR>
 
 colors torte
 colorscheme desert

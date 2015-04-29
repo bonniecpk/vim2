@@ -11,3 +11,6 @@
 ### Modules
 * vim-fugitive: git info in status line
 * vim-airline: nice status line
+* ctrlp: fuzzy finder
+* vinegar.vim: directory/file navigation
+* NerdTree: directory/file navigation in a sidebar
