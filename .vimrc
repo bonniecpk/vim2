@@ -53,19 +53,6 @@ au BufNewFile,BufRead *.skim  set filetype=slim
 au BufNewFile,BufRead *.rabl  set filetype=ruby
 au BufNewFile,BufRead *.hamlc set filetype=haml
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'garbas/vim-snipmate'
-call vundle#end()
-
 " " Add recently accessed projects menu (project plugin)
 " set viminfo^=!
 " 
