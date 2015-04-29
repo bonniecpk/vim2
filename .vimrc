@@ -24,7 +24,6 @@ set cursorline
 set laststatus=2
 " set statusline=%<\ %n:%f\ %m%r%y%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 set cf  " Enable error files & error jumping.
-set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
 set autowrite  " Writes on make/shell commands
 set ruler  " Ruler on
@@ -105,17 +104,18 @@ let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabContextDefaultCompletionType="<C-X><C-O>"
 
 " Configure Javascript settings
-set javascript_enable_domhtmlcss=1
+" set javascript_enable_domhtmlcss=1
 let g:used_javascript_libs = 'underscore,backbone,jquery,angularjs,react,jasmine'
 
 " Adding the following to your .vimrc, will setup SyntaxComplete for every filetype that does not already have a language specific OMNI script: 
-if has("autocmd") && exists("+omnifunc") 
-cmd Filetype * 
-\	if &omnifunc == "" | 
-\	setlocal omnifunc=syntaxcomplete#Complete | 
-\	endif 
-endif 
+" if has("autocmd") && exists("+omnifunc") 
+" cmd Filetype * 
+" \	if &omnifunc == "" | 
+" \	setlocal omnifunc=syntaxcomplete#Complete | 
+" \	endif 
+" endif 
 
 " Status line settings
-let g:airline_theme='dark'
+let g:airline_theme='murmur'
 let g:airline_powerline_fonts = 1
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
