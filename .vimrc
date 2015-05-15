@@ -52,6 +52,7 @@ filetype plugin on
 au BufNewFile,BufRead *.skim  set filetype=slim
 au BufNewFile,BufRead *.rabl  set filetype=ruby
 au BufNewFile,BufRead *.hamlc set filetype=haml
+au BufNewFile,BufRead *.arb   set filetype=ruby
 
 " " Add recently accessed projects menu (project plugin)
 " set viminfo^=!
