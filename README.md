@@ -8,7 +8,10 @@
     
     [host]$ # Install powerline patched fonts: https://github.com/powerline/fonts
     [host]$ pushd ~/Desktop; git clone git@github.com:powerline/fonts.git; ~/Desktop/fonts/install.sh; popd
-    
+
+    [host]$ # Install silver search
+    [host]$ brew install the_silver_searcher
+
     [host]$ mv .vimrc ~/
 
 

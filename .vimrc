@@ -108,3 +108,7 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 " Setup vim-vroom
 let g:vroom_use_colors=1
 let g:vroom_use_vimux=1
+
+" Setup AG (The Silver Search)
+let g:ackprg = 'ag --nogroup --nocolor --column'
+" let g:ackprg = 'ag --vimgrep'  " Which has the same effect but will report every match on the line.
