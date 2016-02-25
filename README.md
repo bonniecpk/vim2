@@ -14,6 +14,7 @@
 
     [host]$ mv .vimrc ~/
 
+* For patched fonts to work, you would have to set iTerm2 "Regular Font" and "Non-ASCII Font" to support the powerline fonts
 
 ### Modules
 * vim-fugitive: git info in status line
