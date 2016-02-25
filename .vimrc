@@ -16,11 +16,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set autoindent
-set number
 set hlsearch
 set hidden
 set nocompatible  " We don't want vi compatibility.
-set cursorline
 set laststatus=2
 set cf  " Enable error files & error jumping.
 set history=256  " Number of things to remember in history.
@@ -34,6 +32,12 @@ set wildmenu
 
 " Use ack instead of grep
 set grepprg=ack
+
+" Set a swap file directory for all swap files
+set directory=~/.vim/tmp
+
+" Set backup file directory for all backup files
+set backupdir=~/.vim/backup
 
 " tab navigation like firefox
 " nnoremap <C-S-tab> :tabprevious<CR>
@@ -75,6 +79,9 @@ set mouse=a  " Mouse in all modes
 set backup                     " Enable creation of backup file.
 set backupdir=~/.vim/backups " Where backups will go.
 set directory=~/.vim/tmp     " Where temporary files will go.
+
+" Set <Leader> key
+:let mapleader = ","
 
 " Setup Ruby autocomplete
 if has("autocmd")
